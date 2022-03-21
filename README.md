@@ -28,7 +28,7 @@ I used `grib2-v2.0.6c` version. Here is the result of my work. The work is on fi
 ## How-to
 
 ```bash
-go get -u github.com/amsokol/go-grib2
+go get -u github.com/mssalnikov/go-grib2
 ```
 
 It contains only one function that reads GRIB2 file:
@@ -63,8 +63,8 @@ Unlike `wgrib2` It's thread-safe.
 
 See the following usage examples:
 
-- [file-grib2csv](https://github.com/amsokol/go-grib2/tree/master/cmd/examples/file-grib2csv) - export GRIB2 file to CSV
-- [http-grib2csv](https://github.com/amsokol/go-grib2/tree/master/cmd/examples/http-grib2csv) - export `nomads.ncep.noaa.gov` HTTP response to CSV
+- [file-grib2csv](https://github.com/mssalnikov/go-grib2/tree/master/cmd/examples/file-grib2csv) - export GRIB2 file to CSV
+- [http-grib2csv](https://github.com/mssalnikov/go-grib2/tree/master/cmd/examples/http-grib2csv) - export `nomads.ncep.noaa.gov` HTTP response to CSV
 
 ## Roadmap
 
