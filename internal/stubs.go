@@ -185,3 +185,11 @@ func GetLevel(sec [][]byte) (level string, err error) {
 	}
 	return level, nil
 }
+
+func GetParamId(sec [][]byte) int {
+	g_sec := *(*[][]unsigned_char)(unsafe.Pointer(&sec))
+
+	paramId := GB2_ParmNum(g_sec)
+
+	return paramId
+}

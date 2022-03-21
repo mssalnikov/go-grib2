@@ -84,7 +84,7 @@ func Read(data []byte) ([]GRIB2, error) {
 					return nil, errors.Wrapf(err, "Failed to GetLevel")
 				}
 
-				grib.ParamId = internal.GB2_ParmNum(sections)
+				grib.ParamId = internal.GetParamId(sections)
 
 				var lon, lat []float64
 				err = internal.LatLon(sections, &lon, &lat)
