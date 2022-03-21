@@ -12,6 +12,7 @@ import (
 type GRIB2 struct {
 	RefTime     time.Time
 	VerfTime    time.Time
+	ParamId     int
 	Name        string
 	Description string
 	Unit        string
@@ -81,6 +82,11 @@ func Read(data []byte) ([]GRIB2, error) {
 				grib.Level, err = internal.GetLevel(sections)
 				if err != nil {
 					return nil, errors.Wrapf(err, "Failed to GetLevel")
+				}
+
+				grib.ParamId, err = internal.GB2_ParmNum(sections)
+				if err != nil {
+					return nil, errors.Wrapf(err, "Failed to get param id")
 				}
 
 				var lon, lat []float64
